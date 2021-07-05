@@ -15,10 +15,15 @@
 
     <header>
         <nav class="menu">
+          <input type="checkbox" id="menuToggle" >
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
             <ul class="menuUl">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#início">Início</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a onclick="uncheck()" href="#sobre">Sobre</a></li>
+                <li><a onclick="uncheck()" href="#início" class="centro">Início</a></li>
+                <li><a onclick="uncheck()" href="#projetos">Projetos</a></li>
             </ul>
         </nav>
     </header>
@@ -43,35 +48,35 @@
                     <img src="img/index print.JPG" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Site Profissa</h5>
-                      <p>Projeto desenvolvido por mim e mais seis alunos para ajudar jovens a escolherem um curso/profissão</p>
+                      <p>Projeto desenvolvido por mim e mais seis alunos para ajudar jovens a escolherem um curso/profissão. Acesse o site <a href="https://profissa-app.herokuapp.com/">aqui</a></p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="img/projeto filme pro blog.JPG" class="d-block w-100">
+                    <img src="img/Portal filems.JPG" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Portal de Filmes</h5>
-                      <p>Trabalho de Desenvolvimento de Software para colocar em prática o conhecimento de HTML, CSS e JavaScript</p>
+                      <p>Trabalho de Desenvolvimento de Software para colocar em prática o conhecimento de HTML, CSS e JavaScript aprendido durante o curso. Acesse o portal <a href="https://arturkazuo.github.io/Projeto_Filme.github.io/">aqui</a></p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="" class="d-block w-100">
+                    <img src="img/block smasher.JPG" class="d-block blockS">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Jogo Multiplayer</h5>
-                      <p>Trabalho de Laboratório de Iniciação à Programação em que utilizamos o site Scratch para criar um jogo multiplayer local</p>
+                      <h5>Jogo Pong</h5>
+                      <p>Primeiro trabalho desenvolvido no Scratch pelos alunos. Baseado no jogo Pong, chamado Block Smasher. Jogue neste site <a href="#blockSM">aqui</a>. Acesse o jogo no Scratch <a href="https://scratch.mit.edu/projects/502363272/">aqui</a></p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="" class="d-block w-100">
+                    <img src="img/multiplaye r games local.JPG" class="d-block blockS">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Jogo Multiplayer</h5>
-                      <p>Trabalho de Laboratório de Iniciação à Programação em que utilizamos o site Scratch para criar um jogo multiplayer local</p>
+                      <p>Trabalho de Laboratório de Iniciação à Programação (LIP) em que utilizamos o site Scratch para criar um jogo multiplayer local. Acesse o site criado por mim para o jogo <a href="https://arturkazuo.github.io./">aqui</a>. Jogue <a href="#multiP">aqui</a>. Acesse o jogo no Scratch <a href="https://scratch.mit.edu/projects/537210991/">aqui</a></p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="" class="d-block w-100">
+                    <img src="img/tinkercad ult.JPG" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Jogo Multiplayer</h5>
-                      <p>Trabalho de Laboratório de Iniciação à Programação em que utilizamos o site Scratch para criar um jogo multiplayer local</p>
+                      <h5>Projeto Tinkercad</h5>
+                      <p>Esta é a última versão de um projeto de LIP que os alunos fizeram na plataforma Tinkercad. Nele, programamos vários circuitos de arduíno para realizar alguma coisa. No meu caso, os LEDs vermelhos que podem ser vistos no canto superior direito acendem como se fossem um teclado, que toca a música "Ode To Joy" de Beethoven. O LCD ao lado dos LEDs mostra a música que está sendo tocada. Para acessar o projeto clique <a href="https://www.tinkercad.com/things/ivqMX0dwh7A">aqui</a></p>
                     </div>
                   </div>
                 </div>
@@ -87,62 +92,55 @@
         </section>
 
         <section id="projetos" class="container projetos">
-          <p>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-            a
-            <br>
-          </p>
+          <div class="row projetosDiv">
+            <h3>
+              Projetos
+            </h3>
+            <p>
+              Para saber mais sobre cada projeto, acesse o <a href="">link</a>. 
+            </p>
+          </div>
+            <div id="blockSM" class="row scratch">
+              <h5 class="col-12">
+                Block Smasher
+              </h5>
+              <iframe src="https://scratch.mit.edu/projects/502363272/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+            <div id="multiP" class="row scratch">
+              <h5 class="col-12">
+                Multiplayer Local
+              </h5>
+              <iframe src="https://scratch.mit.edu/projects/537210991/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section id="sobre" class="container sobre">
-
+          <div class="row sobreDiv">
+            <h3>
+              Sobre Mim
+            </h3>
+            <p>
+              Meu nome é Artur Kazuo Peixoto Guimarães Fuzikawa, sou estudante de Ciência da Computação na PUC Minas.
+              <br>
+              Estudei práticamente a minha vida inteira no Colégio Santo Agostinho, onde também participei do programa bilingue Highschool Canada e também possuo certificado C1 de Cambridge de proficiência em inglês. Comecei a estudar Ciência da Computação na PUC em março de 2021.
+            </p>
+            <h5>
+              Um pouco sobre porque escolhi esse curso:
+            </h5>
+            <p>
+              A resposta curta para explicar o porque e como escolhi fazer Ciência da Computação é: eu não escolhi o curso, eu apenas não tinha outra opção.
+              <br>
+              Em 2019 e início de 2020 eu não sabia quase nada sobre qualquer curso da área de computação. Além de não conhecer muito bem a área, não tinha um interesse real por ela. Na época (2019/2020), o meu interesse flutuou intensamente, entre Quiropraxia e carreira militar (EsPCEx). Não é difícil ver que nenhuma das três coisas tem algo que os relaciona diretamente, são áreas totalmente diferentes. 
+              Em 2020 acabei notando que Quiropraxia não me interessava tanto assim e que a carreira no exército não seria promissora. Portanto, acabei escolhendo Ciência da Computação, que pra mim, na época, era um curso genérico de TI e pelo qual acabei me apaixonando ao longo dos meses. 
+            </p>  
+            <h5>
+              Redes Sociais e contato: 
+            </h5>
+            <div class="stickySide">
+              <a href="https://www.instagram.com/fuzikaz/"><i class="fab fa-instagram"></i></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fuzikaz12@gmail.com&su"><i class="far fa-envelope"></i></a>
+            </div>
+          </div>
         </section>
     </main>
 
@@ -151,6 +149,12 @@
     <footer>
 
     </footer>
+
+    <script>
+        function uncheck() {
+          document.getElementById("menuToggle").checked = false;
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
