@@ -22,6 +22,13 @@ main{
     margin-top: 100px;
 }
 
+.mainMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -66,74 +73,6 @@ nav a:hover{
 #menuCheck{
     display: none;
 }
-
-#menuCheck:checked ~ label i:nth-child(2){
-    display: block;
-}
-
-#menuCheck:checked ~ label i:first-child{
-    display: none;
-}
-
-#menuCheck:not(checked) ~ label i:nth-child(2){
-    display: none;
-}
-
-#menuCheck:not(checked) ~ label i:first-child{
-    display: block;
-}
-
-.backgroundStyle{
-    width: 100%;
-    height: 720px;
-    top: -50px;
-    position: absolute;
-    z-index: -1;
-    background-color: #56cfe0;
-    transform: skewY(-5deg);
-}
-
-/************** backgroundStyle *************/
-
-@media screen and (min-width: 1280px) {
-    .backgroundStyle{
-        height: 720px;
-    }
-}
-
-@media screen and (min-width: 1184px) and (max-width:1279px) {
-    .backgroundStyle{
-        height: 680px !important;
-    }
-}
-
-@media screen and (min-width: 975px) and (max-width:1183px) {
-    .backgroundStyle{
-        height: 640px !important;
-    }
-}
-
-@media screen and (min-width: 361px) and (max-width: 450px) {
-    .backgroundStyle{
-        height: 1000px !important;
-    }
-}
-
-@media screen and (min-width: 280px) and (max-width: 360px) {
-    .backgroundStyle{
-        height: 1070px !important;
-    }
-}
-
-@media screen and (min-width: 0px) and (max-width: 279px) {
-    .backgroundStyle{
-        height: 1120px !important;
-    }
-}
-
-
-
-/*************** Fim  *****************/
 
 section{
     margin-top: 100px;
@@ -336,7 +275,89 @@ footer{
 /************************************ Mobile ******************************************/
 
 @media screen and (max-width:576px) {
+
+    main, .inicio{
+        margin-top: 30px;
+    }
+
+    nav{
+        position: sticky;
+        justify-content: flex-end;
+        height: 60px;
+    }
+
+    .menuUl, .links1{
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        padding: 0;
+    }
+
+    .menuUl a, .links1 a{
+        padding-bottom: 20px;
+    }
+
+    .links1 a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .links1 a:nth-child(1):after{
+        content: 'Instagram';
+    }
+
+    .links1 a:nth-child(2):after{
+        content: 'Email';
+    }
+
+    .links1 a:nth-child(3):after{
+        content: 'Github';
+    }
+
+    .links1 a:nth-child(4):after{
+        content: 'Currículo';
+    }
+
+    .mainMenu{
+        justify-content: flex-start;
+        top: 0;
+        position: absolute;
+        transform: translateX(-200%);
+        transition: all 0.5s ease;
+        height: 1400%;
+        width: 100%;
+        flex-direction: column;
+        background-color: #32bfd1;
+        box-shadow: 0px 4px 10px grey;
+    }
+
+    .menuLabel{
+        font-size: 1.6rem;
+        margin-right: 20px;
+        z-index: 2;
+    }
+
+    #menuCheck:checked ~ label i:nth-child(2){
+        display: block;
+    }
     
+    #menuCheck:checked ~ label i:first-child{
+        display: none;
+    }
+    
+    #menuCheck:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+    
+    #menuCheck:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuCheck:checked ~ .mainMenu{
+        transform: translateX(-22%);
+    }
 }
 
 
