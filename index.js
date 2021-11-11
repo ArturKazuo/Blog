@@ -49,46 +49,28 @@ const observer3 = new IntersectionObserver(entries => {
             document.querySelector('.sobreDiv').classList.remove('fadeOutLeft');
             document.querySelector('.titulo3').classList.add('fadeInRight');
             document.querySelector('.sobreDiv').classList.add('fadeInLeft');
-            document.querySelector('.sobreCards').classList.remove('fadeOutRight');
-            document.querySelector('.sobreCards').classList.add('fadeInRight');
+            document.querySelector('.titulo4').classList.remove('fadeOutRight');
+            document.querySelector('.titulo4').classList.add('fadeInRight');
+            document.querySelector('.sobreCards').classList.remove('fadeOutLeft');
+            document.querySelector('.sobreCards').classList.add('fadeInLeft');
         }
         else{
             document.querySelector('.titulo3').classList.remove('fadeInRight');
             document.querySelector('.sobreDiv').classList.remove('fadeInLeft');
             document.querySelector('.titulo3').classList.add('fadeOutRight');
             document.querySelector('.sobreDiv').classList.add('fadeOutLeft');
-            document.querySelector('.sobreCards').classList.add('fadeOutRight');
-            document.querySelector('.sobreCards').classList.remove('fadeInRight');
-        }
-    })
-})
-
-const observer4 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            document.querySelector('.titulo4').classList.remove('fadeOutLeft');
-            document.querySelector('.contatoDiv').classList.remove('fadeOutRight');
-            document.querySelector('.titulo4').classList.add('fadeInLeft');
-            document.querySelector('.contatoDiv').classList.add('fadeInRight');
-        }
-        else{
-            document.querySelector('.titulo4').classList.remove('fadeInLeft');
-            document.querySelector('.contatoDiv').classList.remove('fadeInRight');
-            document.querySelector('.titulo4').classList.add('fadeOutLeft');
-            document.querySelector('.contatoDiv').classList.add('fadeOutRight');
+            document.querySelector('.titulo4').classList.add('fadeOutRight');
+            document.querySelector('.titulo4').classList.remove('fadeInRight');
+            document.querySelector('.sobreCards').classList.add('fadeOutLeft');
+            document.querySelector('.sobreCards').classList.remove('fadeInLeft');
         }
     })
 })
 
 
-window.onload = function uncheck(){
-    document.body.style.width = 100%;
-};
 
 observer.observe(target);
 
 observer2.observe(target2);
 
 observer3.observe(target3);
-
-observer4.observe(target4);
