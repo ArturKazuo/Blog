@@ -276,6 +276,10 @@ footer{
     .menuLabel{
         display: none;
     }
+
+    .menuUl{
+        font-size: 1.3rem;
+    }
 }
 
 
