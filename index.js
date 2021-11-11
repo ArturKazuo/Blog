@@ -81,6 +81,9 @@ const observer4 = new IntersectionObserver(entries => {
 })
 
 
+window.onload = function uncheck(){
+    document.body.style.width = 100%;
+};
 
 observer.observe(target);
 
