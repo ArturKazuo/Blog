@@ -30,6 +30,27 @@ const observer = new IntersectionObserver(entries => {
     })
 }, options)
 
+const observer2_2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            document.querySelector('.titulo2').classList.remove('fadeOutLeft');
+            document.querySelector('.projetosDiv').classList.remove('fadeOutRight');
+            document.querySelector('.titulo2').classList.add('fadeInLeft');
+            document.querySelector('.projetosDiv').classList.add('fadeInRight');
+            document.querySelector('.projetosTextosDiv').classList.remove('fadeOutRight');
+            document.querySelector('.projetosTextosDiv').classList.add('fadeInRight');
+        }
+        else{
+            document.querySelector('.titulo2').classList.remove('fadeInLeft');
+            document.querySelector('.projetosDiv').classList.remove('fadeInRight');
+            document.querySelector('.titulo2').classList.add('fadeOutLeft');
+            document.querySelector('.projetosDiv').classList.add('fadeOutRight');
+            document.querySelector('.projetosTextosDiv').classList.remove('fadeInRight');
+            document.querySelector('.projetosTextosDiv').classList.add('fadeOutRight');
+        }
+    })
+}, options)
+
 const observer2 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -74,12 +95,16 @@ const observer3 = new IntersectionObserver(entries => {
             document.querySelector('.sobreCards').classList.remove('fadeInLeft');
         }
     })
-})
+}, options)
 
-
+if(window.innerWidth > 576){
+    observer2_2.observe(target2);
+}
+else{
+    console.log('yup')
+    observer2.observe(target2);
+}   
 
 observer.observe(target);
-
-observer2.observe(target2);
 
 observer3.observe(target3);

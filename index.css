@@ -249,6 +249,10 @@ section{
     padding: 10px;
 }
 
+.frontCard img{
+    max-height: 50px;
+}
+
 .behindCard{
     height: 100%;
     width: 100%;
