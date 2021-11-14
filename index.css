@@ -370,10 +370,15 @@ footer{
     .menuLabel{
         font-size: 1.6rem;
         margin-right: 20px;
+        margin-left: 20px;
         z-index: 2;
     }
 
-    #menuCheck:checked ~ label i:nth-child(2){
+    .menuLabel i{
+        transition: all 0.4s ease-in-out;
+    }
+
+    /*#menuCheck:checked ~ label i:nth-child(2){
         display: block;
     }
     
@@ -387,6 +392,14 @@ footer{
     
     #menuCheck:not(checked) ~ label i:first-child{
         display: block;
+    }*/
+
+    #menuCheck:checked ~ label i{
+        transform: rotate(90deg);
+    }
+
+    #menuCheck:not(checked) ~ label i{
+        transform: rotate(-90deg);
     }
 
     #menuCheck:checked ~ .mainMenu{
@@ -584,7 +597,7 @@ footer{
     }
     100% {
         opacity: 0;
-        -webkit-transform: translateX(-50px);
+        -webkit-transform: translateX(50px);
     }
   }
 
@@ -595,7 +608,7 @@ footer{
     }
     100% {
         opacity: 0;
-        -moz-transform: translateX(-50px);
+        -moz-transform: translateX(50px);
     }
 }
 
@@ -606,7 +619,7 @@ footer{
     }
     100% {
         opacity: 0;
-        -o-transform: translateX(-50px);
+        -o-transform: translateX(50px);
     }
 }
 
@@ -617,7 +630,7 @@ footer{
     }
     100% {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(50px);
     }
 }
 

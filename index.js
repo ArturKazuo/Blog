@@ -53,7 +53,7 @@ const observer2_2 = new IntersectionObserver(entries => {
             document.querySelector('.projetosDiv').classList.add('fadeOutRight');
         }
     })
-}, options)
+}, options3)
 
 const observer2 = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -175,8 +175,10 @@ observer6.observe(target2_3);
 observer7.observe(target2_4);
 observer8.observe(target2_5);
 
-
-
 observer.observe(target);
 
 observer3.observe(target3);
+
+function uncheck(){
+    document.querySelector('#menuCheck').checked = false;
+}

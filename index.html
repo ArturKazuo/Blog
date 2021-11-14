@@ -22,17 +22,19 @@
 </head>
 <body>
 
-    <nav>
+    <nav class="nav">
         <input type="checkbox" id="menuCheck">
         <label class="menuLabel" for="menuCheck">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times-circle"></i>
+            <!--<i class="fas fa-bars"></i>
+            <i class="fas fa-times-circle"></i>-->
+            <i class="fas fa-caret-square-down"></i>
         </label>
         <div class="mainMenu">
             <ul class="menuUl">
-                <a href="#inicio">Início</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#sobre">Sobre</a>
+                
+                <a onclick="uncheck()" href="#inicio">Início</a>
+                <a onclick="uncheck()" href="#projetos">Projetos</a>
+                <a onclick="uncheck()" href="#sobre">Sobre</a>
             </ul>
             <div class="links1">
                 <a href="https://www.instagram.com/fuzikaz/" target="_blank"><i class="fab fa-instagram"></i></a>
