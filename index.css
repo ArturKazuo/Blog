@@ -315,7 +315,7 @@ footer{
 
     nav{
         position: fixed;
-        justify-content: flex-end;
+        justify-content: flex-start;
         height: 60px;
         top: 0;
     }
@@ -365,6 +365,7 @@ footer{
         flex-direction: column;
         background-color: #32bfd1;
         box-shadow: 0px 4px 10px grey;
+        padding-top: 50px;
     }
 
     .menuLabel{
@@ -403,7 +404,7 @@ footer{
     }
 
     #menuCheck:checked ~ .mainMenu{
-        transform: translateX(-22%);
+        transform: translateX(-2%);
     }
 
     .projetosDiv{
