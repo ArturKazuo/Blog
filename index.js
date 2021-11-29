@@ -1,3 +1,8 @@
+
+
+
+
+
 const target = document.querySelector('#inicio');
 const target2 = document.querySelector('#projetos');
 const target3 = document.querySelector('#sobre');
